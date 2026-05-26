@@ -137,6 +137,7 @@ Using the BME AI Studio app is easy, provided the app is allowed to search and c
 
 
 [connection](https://raw.githubusercontent.com/mcalisterkm/teach-your-pi-to-sniff-with-BME690/movie/Connection.avif)
+
 [connection](https://github.com/mcalisterkm/teach-your-pi-to-sniff-with-BME690/blob/main/AI-Studio-BME690-Devkit.md#:~:text=Connection.avif)
 
 ### Recording Data
