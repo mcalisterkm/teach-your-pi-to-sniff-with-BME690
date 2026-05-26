@@ -89,11 +89,11 @@ Note: MTP is a protocol to support music players, listing tracks, copying files 
 COINES SDK 2.12.2 comes with updates to the bootloader and MTP applications, and they install as follows:
 The boot loader update is in c:\COINES_SDK\v2.12.2\firmware\app3.1\bootloader_update, and it goes like this.
 
-![bootloader update](img/bootloader.PNG "Figure 12")
+![bootloader update](img/bootloader.png "Figure 12")
 
 The MTP (file system support) is in c:\COINES_SDK\v2.12.2\firmware\app3.1\mtp_fw_update
 
-![mtp update](img/mtp-update.PNG "Figure 13")
+![mtp update](img/mtp-update.png "Figure 13")
 
 
 ### Flashing the Demo Sample Application
@@ -113,16 +113,16 @@ The SampleApp data recorder needs to have a config in order to work. So we need 
 
 First create a new project in AI Studio selecting the 8x BME690 as the target.
 
-![config-save.PNG](img/config-save.PNG "Figure 16")
+![config-save.png](img/config-save.png "Figure 16")
 
 In the figure below the default heater profile and duration is selected, so click on the save as at the bottom of the page and save it to file. Scroll down to the bottom of the page to find the button as shown below.
 
-![Configure-board.PNG](img/Configure-board.PNG "Figure 17")
+![Configure-board.png](img/Configure-board.png "Figure 17")
 
 
 To copy this config to the Application Board 3.1 we need it in MTP mode, so unplug the Application Board 3.1 from power, hold down the right button and connect the USB to the PC to load the MTP firmware. Use file manager (as shown below) to copy the saved board config file to the Application Board 3.1 external flash. When that is complete power cycle the Application Board 3.1.
 
-![Copy-Config.PNG](img/Copy-Config.PNG "Figure 18")
+![Copy-Config.png](img/Copy-Config.png "Figure 18")
 
 At this point the Application Board 3.1 is ready to start recording when rebooted. It flashes red and blue to indicate recording and writing data. The Application Board 3.1 can be unplugged from the PC and connected to a power bank or LiPO battery, and it will start recording data on connection to the power bank (for LiPO the left hand button acts as on/off), the LED flashes blue as it writes data to the flash storage. Leave it for ~15 min to record out some data then pull the power to stop recording, and plug it back into the PC with the right button pressed to launch MTP mode. 
 
@@ -146,7 +146,7 @@ Once the App has discovered BMExx Development Kits it lists them, and when the p
 Achieving a steady state may require experimenting with the board config - heating and sleep profiles.
 The RDC setup is where the sleep profile is set and with the 690, I find it is easier to minimise scatter with a low number or no sleep steps. In IAQ mode having no sleep steps will cause the sensor to heat up and distort the environmental data, but for this task large sleep steps mean the heater is not getting consistency (and we do not use the env data in the AI model).
 
-![board-rdc-config.PNG](img/board-rdc-config.PNG "Figure 15")
+![board-rdc-config.png](img/board-rdc-config.png "Figure 15")
 
 The App is in my view the best way to manage, data recording and labelling, and it lets you see when the sensors have settled down before starting a new recording.
 
@@ -154,20 +154,20 @@ The App is in my view the best way to manage, data recording and labelling, and 
 ## Importing data
 Copying the data from the Application Board 3.1 to the PC is covered above, along with its conversion from .udf to .bmerawdata. Keeping in mind file management issues, I recommend copying and deleting files off the Application Board 3.1. (MTP lacks folders and timestamps)  AI Studio Desktop is shown below with two data sets Coffee and Air with the length of time and number of cycles highlighted.  
 
-![AI-Studio-Import.PNG](img/AI-Studio-Import.PNG "Figure 16")
+![AI-Studio-Import.png](img/AI-Studio-Import.png "Figure 16")
 
 The Air data has more cycles than the Coffee and imbalance is something the model generation will test for. Clicking on the Settings link allows you to adjust (see the blue shading and the start and end times) the sample data to be a better match or focus on a section of data with less variablility. 
 
-![AI-Studio-data prep.PNG](img/AI-Studio-data%20prep.PNG "Figure 17")
+![AI-Studio-data prep.png](img/AI-Studio-data%20prep.png "Figure 17")
 
 ## Generating an AI Model
 The data preparation above is aimed at making the next steps go smoothly, that is creating the classes (up to 4) from the data you imported. AI Studio Desktop will validate the class data, and it may be necessary to return to the data preparation or to record some more data. 
 
-![AI-Studio-Classes.PNG](img/AI-Studio-Classes.PNG "Figure 18")
+![AI-Studio-Classes.png](img/AI-Studio-Classes.png "Figure 18")
 
 Once AI Studio is happy with you class data, an algorithm is generated and a set of scores are produced to provide insight in the quality of the model generated. In the figure below the yellow highlighting is on the Help Link which explains what these measures are, and is a really useful manual for this set of products.
 
-![AI-Studio-trg-res.PNG](img/AI-Studio-trg-res.PNG "Figure 19")
+![AI-Studio-trg-res.png](img/AI-Studio-trg-res.png "Figure 19")
 
 ## Testing an AI Model
 I have covered generating the AI Model in earlier articles on the BME688 Devkit, and the main change is to be aware of selecting BME688 or BME690 as it defaults to BME688 and you have no data visible as you have just collected BME690 data. And that is a feature: data collected on the BME688 produces AI Models for the BME688 and data from the BME690 produces AI Models for the BME690. There is no interchange of data or models. 
