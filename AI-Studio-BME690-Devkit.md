@@ -184,7 +184,7 @@ The help link highlighted in the top right corner, launches the on-line document
 
 
 # Deploying to your own board
-After testing in AI Studio Mobile, you may wish to deploy an AI Model to custom hardware. My experience is with Raspberry PI and the python wrapper for BSEC3. There is a complete AI Studio Desktop project for you to open and experiment with, and an exported AI Model for AIR/COFFEE with the sniff.py program showing how to use the model.  The Python 3 wrapper for BSEC 3.3.0.0 is open source and hosted on GitHub ![here](https://github.com/mcalisterkm/bme69x-python-library-bsec3.3.0.0), and the data and AI model are in the tools directory (see the tools/Readme.md). 
+After testing in AI Studio Mobile, you may wish to deploy an AI Model to custom hardware. My experience is with Raspberry PI and the python wrapper for BSEC3. There is a complete AI Studio Desktop project for you to open and experiment with, and an exported AI Model for AIR/COFFEE with the sniff.py program showing how to use the model.  The Python 3 wrapper for BSEC 3.3.0.0 is open source and hosted on GitHub [here](https://github.com/mcalisterkm/bme69x-python-library-bsec3.3.0.0), and the data and AI model are in the tools directory (see the tools/Readme.md). 
 
 ## Compatibility with BME688/BME680
 
