@@ -136,7 +136,7 @@ The AI-Studio Mobile app is Android only, and can be found and installed from th
 Using the BME AI Studio app is easy, provided the app is allowed to search and connect to the Application Board 3.1 via bluetooth. If you use Google system tools to add a bluetooth device, like you might a pair of headphones using Settings -> Device Connection ......, it will lead to connection problems in the BME-AI Studio app. Just leave it to the BME AI Studio app to search and connect to the Application Board 3.1 and all will be well. The video below shows a new connection being made using AI Studio Mobile. If you have paired using the google tools then you will need to go into the bluetooth settings and "forget" the device, then try again with the BME AI Studio app.
 
 
-[connection](https://raw.githubusercontent.com/mcalisterkm/teach-your-pi-to-sniff-with-BME690/movie/Connection.avif
+[connection](https://raw.githubusercontent.com/mcalisterkm/teach-your-pi-to-sniff-with-BME690/movie/Connection.avif)
 
 
 ### Recording Data
