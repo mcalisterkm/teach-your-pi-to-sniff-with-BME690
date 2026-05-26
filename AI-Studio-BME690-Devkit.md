@@ -145,7 +145,7 @@ Once the App has discovered BMExx Development Kits it lists them, and when the p
 ![AI-Studio-Mobile_Recording-Data](https://raw.githubusercontent.com/mcalisterkm/teach-your-pi-to-sniff-with-BME690/main/movie/AI-Studio-Mobile_Recording-Data.avif)
 
 Achieving a steady state may require experimenting with the board config - heating and sleep profiles.
-The RDC setup is where the sleep profile is set and with the 690, I find it is easier to minimise scatter with a low number or no sleep steps. In IAQ mode having no sleep steps will cause the sensor to heat up and distort the environmental data, but for this task large sleep steps mean the heater is not getting consistency (and we do not use the env data in the AI model).
+The RDC setup is where the sleep profile is set and with the 690, I find it is easier to minimise scatter with a low number or no sleep steps. In IAQ mode having no sleep steps will cause the sensor to heat up and distort the environmental data, but for this task large number of sleep steps mean the heater is not getting consistency (and the advice from Bosch is not use the env data in the AI model).
 
 ![board-rdc-config.png](img/board-rdc-config.png "Figure 15")
 
