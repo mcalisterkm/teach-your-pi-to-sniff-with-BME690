@@ -1,1 +1,1 @@
-This is a tutorial on how to collect data and generate an AI model for the BME690 using the Bosch Sensortec Development Kit, and AI Studio (Desktop and Mobile)
+This is a [tutorial](https://github.com/mcalisterkm/teach-your-pi-to-sniff-with-BME690/blob/main/AI-Studio-BME690-Devkit.md) on how to collect data and generate an AI model for the BME690 using the Bosch Sensortec Development Kit, and AI Studio (Desktop and Mobile)
