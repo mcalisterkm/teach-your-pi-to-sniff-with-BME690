@@ -89,11 +89,11 @@ Note: MTP is a protocol to support music players, listing tracks, copying files 
 COINES SDK 2.12.2 comes with updates to the bootloader and MTP applications, and they install as follows:
 The boot loader update is in c:\COINES_SDK\v2.12.2\firmware\app3.1\bootloader_update, and it goes like this.
 
-![bootloader update](img/bootloader.png "Figure 12")
+![bootloader update](img/bootloader.PNG "Figure 12")
 
 The MTP (file system support) is in c:\COINES_SDK\v2.12.2\firmware\app3.1\mtp_fw_update
 
-![mtp update](img/mtp-update.png "Figure 13")
+![mtp update](img/mtp-update.PNG "Figure 13")
 
 
 ### Flashing the Demo Sample Application
