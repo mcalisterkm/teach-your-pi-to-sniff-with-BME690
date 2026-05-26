@@ -135,12 +135,13 @@ The AI-Studio Mobile app is Android only, and can be found and installed from th
 
 Using the BME AI Studio app is easy, provided the app is allowed to search and connect to the Application Board 3.1 via bluetooth. If you use Google system tools to add a bluetooth device, like you might a pair of headphones using Settings -> Device Connection ......, it will lead to connection problems in the BME-AI Studio app. Just leave it to the BME AI Studio app to search and connect to the Application Board 3.1 and all will be well. The video below shows a new connection being made using AI Studio Mobile. If you have paired using the google tools then you will need to go into the bluetooth settings and "forget" the device, then try again with the BME AI Studio app.
 
-[connection.mp4](movie/connection.mp4 "Figure 13")
+
+[connection](movie/connection.avif "Figure 13")
 
 ### Recording Data
 Once the App has discovered BMExx Development Kits it lists them, and when the phone is close (BLE is detected) the connect button lights up blue.  The Ai Studio Mobile app has two functions: managing data collection and testing AI Models. In collecting data the appp can create new sessions and label them, and deep dive into raw data from each of the sensors.  The video below shows the use of an existing Application Board connection (BME AI Studio has seen the 688 devkit and 690 devkits previously), with the initial data recording having a large amount of scatter, the variability reduces and after 15 min or so,  achieving a steady state which is when we label the data and leave it running for at least 30 min.  
 
-[AI-Studio-Mobile_Recording-Data.mp4](movie/AI-Studio-Mobile_Recording-Data.mp4 "Figure 14")
+[AI-Studio-Mobile_Recording-Data.avif](movie/AI-Studio-Mobile_Recording-Data.avif "Figure 14")
 
 Achieving a steady state may require experimenting with the board config - heating and sleep profiles.
 The RDC setup is where the sleep profile is set and with the 690, I find it is easier to minimise scatter with a low number or no sleep steps. In IAQ mode having no sleep steps will cause the sensor to heat up and distort the environmental data, but for this task large sleep steps mean the heater is not getting consistency (and we do not use the env data in the AI model).
@@ -173,7 +174,7 @@ I have covered generating the AI Model in earlier articles on the BME688 Devkit,
 
 From the AI-Studio Windows algorithm page there is an "Export for BSEC" button, which gives a warning pop-up about the model being for BME690 only, then a screen to choose the BSEC 3 version you wish to target, and finally you can export the model to a storage location of your choice. The .aiconfig and .config files are the ones to copy to the Application Board Flash storage.  To do that power cycle the Application board while holding the right hand button and plugging it into the PC, which brings it up into MTP mode and File Manager can copy and paste the files across.  
 
-[AI-Studio-Test-Model.mp4](movie/AI-Studio-Test-Model.mp4 "Figure 20")
+[AI-Studio-Test-Model](movie/AI-Studio-Test-Model.avif "Figure 20")
 
 Power cycle the Application Board again, but without holding down buttons, which start up the sample application data collection. Now connect the AI Studio Mobile app to the Application Board and click on "Live-test algorithm" which reads the .aiconfig file and starts working as shown below for a classification model. The model shown below is not great (low accuracy ~50%)  and the sensors are not very consistent apart from in clean air.
 
