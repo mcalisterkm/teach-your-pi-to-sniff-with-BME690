@@ -28,7 +28,7 @@ The Shuttle Boards have a pin spacing of 1.27mm which is too small for a standar
 
 ## BME690 Module
 On the Raspberry Pi I have two Pimoroni BME690 sensor modules, connected by I2C on address 0x77 and 0x76.
-![Pimoroni_bme690.JPG](img/Pimoroni_bme690.JPG)
+![Pimoroni_bme690.JPG](img/Pimoroni_bme690.png)
 
 
 ## Software Versions
