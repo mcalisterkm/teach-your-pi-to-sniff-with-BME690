@@ -173,20 +173,18 @@ Once AI Studio is happy with you class data, an algorithm is generated and a set
 ## Testing an AI Model
 I have covered generating the AI Model in earlier articles on the BME688 Devkit, and the main change is to be aware of selecting BME688 or BME690 as it defaults to BME688 and you have no data visible as you have just collected BME690 data. And that is a feature: data collected on the BME688 produces AI Models for the BME688 and data from the BME690 produces AI Models for the BME690. There is no interchange of data or models. 
 
-From the AI-Studio Windows algorithm page there is an "Export for BSEC" button, which gives a warning pop-up about the model being for BME690 only, then a screen to choose the BSEC 3 version you wish to target, and finally you can export the model to a storage location of your choice. The .aiconfig and .config files are the ones to copy to the Application Board Flash storage.  To do that power cycle the Application board while holding the right hand button and plugging it into the PC, which brings it up into MTP mode and File Manager can copy and paste the files across.  
+From the AI-Studio Windows algorithm page there is an "Export for BSEC" button, which gives a warning pop-up about the model being for BME690 only, then a screen to choose the BSEC 3 version you wish to target, and finally you can export the model to a storage location of your choice. The .aiconfig and .config files are the ones to copy to the Application Board Flash storage.  To do that power cycle the Application board while holding the right hand button and plugging it into the PC, which brings it up into MTP mode and File Manager can copy and paste the files across.  Power cycle the Application Board again, but without holding down buttons, which start up the sample application data collection. Now connect the AI Studio Mobile app to the Application Board and click on "Live-test algorithm" which reads the .aiconfig file and starts working as shown in the video below.
 
 ![AI-Studio-Test-Model](https://raw.githubusercontent.com/mcalisterkm/teach-your-pi-to-sniff-with-BME690/main/movie/AI-Studio-Test-Model.avif)
 
-Power cycle the Application Board again, but without holding down buttons, which start up the sample application data collection. Now connect the AI Studio Mobile app to the Application Board and click on "Live-test algorithm" which reads the .aiconfig file and starts working as shown below for a classification model. The model shown below is not great (low accuracy ~50%)  and the sensors are not very consistent apart from in clean air.
+The AI studio project in the video, is the one supplied in this repository which you can load in AI Studio and modify. 
+![Training-resulrs](img/AI-Studio-trg-res.png)
+The help link highlighted in the top right corner, launches the on-line documentation which is extensive. 
 
-![AI Studio Mobile](./img/Test-Model2.jpg "Figure 21")
 
-The AI Studio Mobile app allows deep dives on each sensor in real time. 
-
-![AI Studio Mobile](./img/Model-test-deep.jpg "Figure 22")
 
 # Deploying to your own board
-After testing in AI Studio Mobile, you may wish to deploy an AI Model to custom hardware. My experience is with Raspberry PI and the python wrapper for BSEC3. There is a complete AI Studio Desktop project for you to open and experiment with, and an exported AI Model for AIR/COFFEE with the sniff.py program showing how to use the model.  The Python 3 wrapper for BSEC 3.3.0.0 is open source and hosted on GitHub [here](https://github.com/mcalisterkm/bme69x-python-library-bsec3.3.0.0), and the data and AI model are in the tools directory (see the tools/Readme.md). 
+After testing in AI Studio Mobile, you may wish to deploy an AI Model to custom hardware. My experience is with Raspberry PI and the python wrapper for BSEC3. There is a complete AI Studio Desktop project for you to open and experiment with, and an exported AI Model for AIR/COFFEE with the sniff.py program showing how to use the model.  The Python 3 wrapper for BSEC 3.3.0.0 is open source and hosted on GitHub ![here](https://github.com/mcalisterkm/bme69x-python-library-bsec3.3.0.0), and the data and AI model are in the tools directory (see the tools/Readme.md). 
 
 ## Compatibility with BME688/BME680
 
