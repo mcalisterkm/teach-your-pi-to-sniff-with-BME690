@@ -83,7 +83,7 @@ And when plugged and powered on with two red LED's (no MTP button) it looks like
 
 And if it does not look like one of the above then the PC and the Application Board 3.1 are not talking and that needs fixing before trying anything else. 
 
-Note: MTP is a protocol to support music players, listing tracks, copying files etc. It is a simple file system for listing files (no folders, etc). In later releases of COINES_SDK the MTP firmware has become more robust, so do update.  
+Note: MTP is a protocol to support music players: track listing, copying, files etc. It is a simple file list, which does not support time stamps or folders so clean it out regularly. In later releases of COINES_SDK the MTP firmware has become more robust, so do update the firmware.  
 
 ### Firmware update
 COINES SDK 2.12.2 comes with updates to the bootloader and MTP applications, and they install as follows:
