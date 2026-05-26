@@ -15,7 +15,7 @@ The Application Board has a U-Blox NINA-B30 processor (Cortex M4), with bluetoot
 
 Below is the Application Board showing the mount used by the shuttle boards (1x 690 shuttle shown).
 
-![Application Board - mount](img/app-board-690.jpg "Figure 2")
+![Application Board - mount](img/app-board-690.png "Figure 2")
 
 Note the Application Board connector is micro-usb (not usb-c).
 
@@ -28,7 +28,7 @@ The Shuttle Boards have a pin spacing of 1.27mm which is too small for a standar
 
 ## BME690 Module
 On the Raspberry Pi I have two Pimoroni BME690 sensor modules, connected by I2C on address 0x77 and 0x76.
-![Pimoroni_bme690.JPG](img/Pimoroni_bme690.png)
+![Pimoroni_bme690](img/Pimoroni_bme690.png)
 
 
 ## Software Versions
