@@ -136,7 +136,8 @@ The AI-Studio Mobile app is Android only, and can be found and installed from th
 Using the BME AI Studio app is easy, provided the app is allowed to search and connect to the Application Board 3.1 via bluetooth. If you use Google system tools to add a bluetooth device, like you might a pair of headphones using Settings -> Device Connection ......, it will lead to connection problems in the BME-AI Studio app. Just leave it to the BME AI Studio app to search and connect to the Application Board 3.1 and all will be well. The video below shows a new connection being made using AI Studio Mobile. If you have paired using the google tools then you will need to go into the bluetooth settings and "forget" the device, then try again with the BME AI Studio app.
 
 
-[connection](https://raw.githubusercontent.com//mcalisterkm/teach-your-pi-to-sniff-with-BME690/movie/Connection.avif)
+[connection](https://raw.githubusercontent.com/mcalisterkm/teach-your-pi-to-sniff-with-BME690/movie/Connection.avif)
+[connection](https://github.com/mcalisterkm/teach-your-pi-to-sniff-with-BME690/blob/main/AI-Studio-BME690-Devkit.md#:~:text=Connection.avif)
 
 ### Recording Data
 Once the App has discovered BMExx Development Kits it lists them, and when the phone is close (BLE is detected) the connect button lights up blue.  The Ai Studio Mobile app has two functions: managing data collection and testing AI Models. In collecting data the appp can create new sessions and label them, and deep dive into raw data from each of the sensors.  The video below shows the use of an existing Application Board connection (BME AI Studio has seen the 688 devkit and 690 devkits previously), with the initial data recording having a large amount of scatter, the variability reduces and after 15 min or so,  achieving a steady state which is when we label the data and leave it running for at least 30 min.  
