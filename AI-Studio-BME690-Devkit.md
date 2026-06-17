@@ -46,13 +46,24 @@ At the time of writing this is available from [here:](https://www.bosch-sensorte
 
 Much of this software requires agreeing to a licence by form filling, then following a download link sent to your email address. If you have used Bosch Sensortec software before this will be familiar.
 
-In the BME690 Development Kit the instructions note that MINGW (a Windows version of gcc and ARM cross compilers) is required. The instructions for installing and setting paths are in the Readme.md supplied with the BME690_devkitfw_3.1.0 zip file. However, it does not say which version to use and it is the one highlighted in the figure below.
+## Prerequisites
+
+### USB-SERIAL
+If you previously used the BME688 devkit then you will have installed  the silicon labs usb-serial driver and it works fine with the BME690-Devkit. If not you may need to install a usb-serial driver. To check this launch Windows device manager and change the view to include hidden files. Mine looks like this, with the COINES_SDK usb-serial driver installed and the Application Board 3.1 connected to the PC.
+
+![device-tree.png](img/device-tree.png)
+
+If you see the silicon labs driver then you are good to go, if not then install the COINES_SDK usb-serial driver by running C:\COINES_SDK\v2.12.2\driver\app_board_usb_driver.exe
+
+### GCC for Windows
+
+The BME690 Development Kit the instructions (Readme.md) note that MINGW (a Windows version of gcc and ARM cross compilers) is required. However, it does not say which one to download, and it is the one highlighted in the figure below.
 
 ![MinGW.png](img/MinGW.png)
 
+MINGW installs by default in C:\TDM-GCC-32 but it does not add its self to the PATH environment variable.  The Readme.md notes that you need to add the bin directory to the PATH environment variable, and it should look like this added as a new row.
 
-If you previously used the BME688 devkit then you will have installed  the silicon labs usb-serial driver and it works fine with the BME690-Devkit. If not you may need to install a usb-serial driver. The BME690-Devkit is dependent on COINES to provide the comms with the Application Board 3.1 and the Application Board 3.1 firmware updates come with the COINES_SDK releases (requires tracking the github releases).
-
+![EnvVar.png](img/EnvVar.png)
 
 ## Install
 AI Studio Desktop is a Windows only application, so I am assuming installation on a Windows PC. I cover alternatives at the end of this tutorial.
